@@ -18,29 +18,29 @@
         </a>
         
         <div class="flex items-center space-x-2 md:space-x-4 ml-auto">
-            <select class="bg-transparent border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-1.5 md:p-2 cursor-pointer">
+            <select id="lang-select" onchange="changeLanguage(this.value)" class="bg-transparent border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-1.5 md:p-2 cursor-pointer">
                 <option value="fr">🇫🇷 FR</option>
                 <option value="pt">🇵🇹 PT</option>
                 <option value="en">🇬🇧 EN</option>
             </select>
             
-            <a href="https://app.funnance.app" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 md:px-5 py-2 rounded-xl transition-colors text-sm shadow-sm whitespace-nowrap">
+            <a href="https://app.funnance.app" id="btn-login" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 md:px-5 py-2 rounded-xl transition-colors text-sm shadow-sm whitespace-nowrap">
                 Se connecter
             </a>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto text-center px-4 pt-16 pb-24">
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+        <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
             Prenez le contrôle de votre argent, <br>
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">au pixel près.</span>
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">
+        <p id="hero-desc" class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">
             Le tableau de bord financier trilingue pensé pour suivre votre capital, automatiser votre fonds d'urgence et optimiser vos investissements sans prise de tête.
         </p>
         
         <div class="mt-10">
-            <a href="https://app.funnance.app" class="inline-block bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-700 hover:to-teal-600 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-md transform hover:-translate-y-0.5 text-base md:text-lg">
+            <a href="https://app.funnance.app" id="btn-cta" class="inline-block bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-700 hover:to-teal-600 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-md transform hover:-translate-y-0.5 text-base md:text-lg">
                 🚀 Commencer l'essai gratuit
             </a>
         </div>
@@ -48,26 +48,78 @@
 
     <section class="bg-white border-t border-gray-100 py-20 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">Conçu pour simplifier vos finances</h2>
+            <h2 id="feat-title" class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">Conçu pour simplifier vos finances</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
                     <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">📈</div>
-                    <h3 class="font-bold text-lg mb-2">Évolution du Capital</h3>
-                    <p class="text-sm text-gray-500">Visualisez la croissance de votre patrimoine mois après mois.</p>
+                    <h3 id="feat-1-title" class="font-bold text-lg mb-2">Évolution du Capital</h3>
+                    <p id="feat-1-desc" class="text-sm text-gray-500">Visualisez la croissance de votre patrimoine mois après mois.</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
                     <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">🛡️</div>
-                    <h3 class="font-bold text-lg mb-2">Fonds de Sécurité</h3>
-                    <p class="text-sm text-gray-500">Suivez l'état de votre fonds d'urgence et de vos investissements.</p>
+                    <h3 id="feat-2-title" class="font-bold text-lg mb-2">Fonds de Sécurité</h3>
+                    <p id="feat-2-desc" class="text-sm text-gray-500">Suivez l'état de votre fonds d'urgence et de vos investissements.</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
                     <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">🌍</div>
-                    <h3 class="font-bold text-lg mb-2">Totalement Multilingue</h3>
-                    <p class="text-sm text-gray-500">Basculez instantanément l'application dans la langue de votre choix.</p>
+                    <h3 id="feat-3-title" class="font-bold text-lg mb-2">Totalement Multilingue</h3>
+                    <p id="feat-3-desc" class="text-sm text-gray-500">Basculez instantanément l'application dans la langue de votre choix.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <script>
+        const translations = {
+            fr: {
+                "btn-login": "Se connecter",
+                "hero-title": "Prenez le contrôle de votre argent, <br> <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500\">au pixel près.</span>",
+                "hero-desc": "Le tableau de bord financier trilingue pensé pour suivre votre capital, automatiser votre fonds d'urgence et optimiser vos investissements sans prise de tête.",
+                "btn-cta": "🚀 Commencer l'essai gratuit",
+                "feat-title": "Conçu pour simplifier vos finances",
+                "feat-1-title": "Évolution du Capital",
+                "feat-1-desc": "Visualisez la croissance de votre patrimoine mois après mois.",
+                "feat-2-title": "Fonds de Sécurité",
+                "feat-2-desc": "Suivez l'état de votre fonds d'urgence et de vos investissements.",
+                "feat-3-title": "Totalement Multilingue",
+                "feat-3-desc": "Basculez instantanément l'application dans la langue de votre choix."
+            },
+            en: {
+                "btn-login": "Log in",
+                "hero-title": "Take control of your money, <br> <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500\">down to the pixel.</span>",
+                "hero-desc": "The trilingual financial dashboard designed to track your capital, automate your emergency fund, and optimize your investments effortlessly.",
+                "btn-cta": "🚀 Start free trial",
+                "feat-title": "Designed to simplify your finances",
+                "feat-1-title": "Capital Evolution",
+                "feat-1-desc": "Visualize the growth of your wealth month by month.",
+                "feat-2-title": "Security Fund",
+                "feat-2-desc": "Track the status of your emergency fund and investments.",
+                "feat-3-title": "Fully Multilingual",
+                "feat-3-desc": "Instantly switch the application to your preferred language."
+            },
+            pt: {
+                "btn-login": "Entrar",
+                "hero-title": "Assuma o controle do seu dinheiro, <br> <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500\">ao pixel.</span>",
+                "hero-desc": "O painel financeiro trilíngue pensado para acompanhar o seu capital, automatizar o seu fundo de emergência e otimizar os seus investimentos sem dores de cabeça.",
+                "btn-cta": "🚀 Começar o teste grátis",
+                "feat-title": "Concebido para simplificar as suas finanças",
+                "feat-1-title": "Evolução do Capital",
+                "feat-1-desc": "Visualize o crescimento do seu patrimônio mês após mês.",
+                "feat-2-title": "Fundo de Segurança",
+                "feat-2-desc": "Acompanhe o estado do seu fundo de emergência e investimentos.",
+                "feat-3-title": "Totalmente Multilíngue",
+                "feat-3-desc": "Mude instantaneamente a aplicação para o idioma da sua preferência."
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Cette fonction va chercher les mots dans le dictionnaire ci-dessus
+            for (let key in translations[lang]) {
+                if(document.getElementById(key)) {
+                    document.getElementById(key).innerHTML = translations[lang][key];
+                }
+            }
+        }
+    </script>
 </body>
 </html>

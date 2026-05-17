@@ -9,12 +9,24 @@
 <body class="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800 antialiased">
 
     <header class="flex items-center justify-between px-6 py-5 max-w-7xl mx-auto">
-        <span class="text-2xl font-black tracking-tight text-emerald-700">
-            FUN<span class="text-teal-500">NANCE</span>
-        </span>
-        <a href="https://funnance.vercel.app" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-xl transition-colors text-sm shadow-sm">
-            Se connecter
-        </a>
+        <div class="flex items-center">
+            <img src="votre-logo.png" alt="Funnance" class="h-10 hidden" id="vrai-logo">
+            <span class="text-2xl font-black tracking-tight text-emerald-700" id="logo-texte">
+                FUN<span class="text-teal-500">NANCE</span>
+            </span>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <select class="bg-transparent border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block p-2 cursor-pointer">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="pt">🇵🇹 PT</option>
+                <option value="en">🇬🇧 EN</option>
+            </select>
+            
+            <a href="https://funnance.vercel.app" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2 rounded-xl transition-colors text-sm shadow-sm">
+                Se connecter
+            </a>
+        </div>
     </header>
 
     <main class="max-w-4xl mx-auto text-center px-4 pt-16 pb-24">
@@ -28,11 +40,8 @@
         
         <div class="mt-10">
             <a href="https://funnance.vercel.app" class="inline-block bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-700 hover:to-teal-600 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-md transform hover:-translate-y-0.5 text-base md:text-lg">
-                🚀 Commencer l'essai gratuit de 45 jours
+                🚀 Commencer l'essai gratuit
             </a>
-            <p class="text-xs text-gray-400 mt-3 italic">
-                Puis seulement 2 € / mois. Sans engagement, annulez à tout moment.
-            </p>
         </div>
     </main>
 
@@ -43,26 +52,21 @@
                 <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
                     <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">📈</div>
                     <h3 class="font-bold text-lg mb-2">Évolution du Capital</h3>
-                    <p class="text-sm text-gray-500">Visualisez la croissance de votre patrimoine mois après mois grâce à des graphiques clairs et précis.</p>
+                    <p class="text-sm text-gray-500">Visualisez la croissance de votre patrimoine mois après mois.</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
                     <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">🛡️</div>
                     <h3 class="font-bold text-lg mb-2">Fonds de Sécurité</h3>
-                    <p class="text-sm text-gray-500">Suivez l'état de votre fonds d'urgence et de vos investissements pour parer à toute éventualité.</p>
+                    <p class="text-sm text-gray-500">Suivez l'état de votre fonds d'urgence et de vos investissements.</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
                     <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">🌍</div>
                     <h3 class="font-bold text-lg mb-2">Totalement Multilingue</h3>
-                    <p class="text-sm text-gray-500">Basculez instantanément l'application en Français, Portugais ou Anglais selon vos préférences.</p>
+                    <p class="text-sm text-gray-500">Basculez instantanément l'application dans la langue de votre choix.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="border-t border-gray-100 bg-gray-50 py-8 px-6 text-center text-xs text-gray-400">
-        <p>&copy; 2026 FUNNANCE. Tous droits réservés.</p>
-        <p class="mt-1">Mentions Légales & Politique de Confidentialité disponibles au lancement officiel.</p>
-    </footer>
 
 </body>
 </html>

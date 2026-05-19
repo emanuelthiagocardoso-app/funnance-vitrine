@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>FUNNANCE - Votre tableau de bord financier personnel</title>
+    <meta name="description" content="Le tableau de bord financier trilingue pensé pour suivre votre capital, automatiser votre fonds d'urgence et optimiser vos investissements sans prise de tête.">
+    <meta name="keywords" content="finances personnelles, budget, investissement, fonds d'urgence, capital, tableau de bord financier">
+    <meta name="author" content="Funnance">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.funnance.app/">
+    <meta property="og:title" content="FUNNANCE - Prenez le contrôle de votre argent au pixel près.">
+    <meta property="og:description" content="Suivez votre capital, automatisez votre fonds d'urgence et optimisez vos investissements sur notre application trilingue.">
+    <meta property="og:image" content="https://www.funnance.app/icon-192.png.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.funnance.app/">
+    <meta property="twitter:title" content="FUNNANCE - Votre tableau de bord financier personnel">
+    <meta property="twitter:description" content="Le tableau de bord financier trilingue pensé pour suivre votre capital et vos investissements.">
+    <meta property="twitter:image" content="https://www.funnance.app/icon-192.png.png">
+
     <link rel="icon" type="image/png" href="icon-192.png.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800 antialiased">
@@ -107,13 +125,12 @@
                 "feat-1-desc": "Visualize o crescimento do seu patrimônio mês após mês.",
                 "feat-2-title": "Fundo de Segurança",
                 "feat-2-desc": "Acompanhe o estado do seu fundo de emergência e investimentos.",
-                "feat-3-title": "Totalmente Multilíngue",
+                "feat-3-title": "Totalemente Multilíngue",
                 "feat-3-desc": "Mude instantaneamente a aplicação para o idioma da sua preferência."
             }
         };
 
         function changeLanguage(lang) {
-            // Cette fonction va chercher les mots dans le dictionnaire ci-dessus
             for (let key in translations[lang]) {
                 if(document.getElementById(key)) {
                     document.getElementById(key).innerHTML = translations[lang][key];
